@@ -22,7 +22,7 @@ const { title, description = "DROG Group makes independent interventions against
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/" class="nav-logo">DROG<span>.</span></a>
+        <a href="/" class="nav-logo"><img src="/logo.png" alt="DROG" /></a>
         <div class="nav-links">
           <a href="/">Home</a>
           <a href="/about">About</a>
@@ -47,7 +47,7 @@ const { title, description = "DROG Group makes independent interventions against
       <div class="footer-container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="/" class="footer-logo">DROG<span>.</span></a>
+            <a href="/" class="footer-logo"><img src="/logo.png" alt="DROG" /></a>
             <p>Building the most successful European-centered community for independent interventions against disinformation.</p>
             <div class="footer-social">
               <a href="https://linkedin.com/company/drog" aria-label="LinkedIn">
@@ -176,14 +176,13 @@ const { title, description = "DROG Group makes independent interventions against
       }
 
       .nav-logo {
-        font-family: var(--font-mono);
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--gray-900);
+        display: flex;
+        align-items: center;
       }
 
-      .nav-logo span {
-        color: var(--accent);
+      .nav-logo img {
+        height: 40px;
+        width: auto;
       }
 
       .nav-links {
@@ -284,14 +283,13 @@ const { title, description = "DROG Group makes independent interventions against
       }
 
       .footer-logo {
-        font-family: var(--font-mono);
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--white);
+        display: inline-block;
       }
 
-      .footer-logo span {
-        color: var(--accent);
+      .footer-logo img {
+        height: 36px;
+        width: auto;
+        filter: brightness(0) invert(1);
       }
 
       .footer-social {

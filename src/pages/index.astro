@@ -7,18 +7,18 @@ import Layout from '../layouts/Layout.astro';
   <section class="hero">
     <div class="hero-container">
       <div class="hero-content">
-        <div class="hero-badge">European Counter-Disinformation</div>
+        <div class="hero-badge">The Hague, Netherlands</div>
         <h1 class="hero-title">
-          Building collective capacity to navigate
-          <span class="hero-highlight">information uncertainty</span>
+          We design interventions against
+          <span class="hero-highlight">disinformation</span>
         </h1>
         <p class="hero-description">
-          DROG unites Practitioners, Scientists, Donors, Artists, and Creative Techs
-          to develop science-based interventions against disinformation.
+          DROG is a social enterprise that develops science-based games, tools, and methods
+          to help people recognize and resist manipulation techniques online.
         </p>
         <div class="hero-actions">
-          <a href="/community" class="btn btn-primary">Join the Community</a>
-          <a href="/dim" class="btn btn-outline">Explore the DIM Model</a>
+          <a href="/about" class="btn btn-primary">Learn What We Do</a>
+          <a href="/community" class="btn btn-outline">Join the Community</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -62,53 +62,102 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="section about">
+  <!-- What We Do Section -->
+  <section class="section what-we-do">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-content">
-          <span class="section-label">About DROG</span>
-          <h2 class="section-title">Solving the Definitional Problem</h2>
-          <p class="about-text">
-            The DROG Disinformation Intervention Model (DROG DIM) categorizes interventions
-            into six generations based on paradigm shifts that have occurred in the field
-            of counter-disinformation over the past decade.
-          </p>
-          <p class="about-text">
-            We believe there are no silver bullets. Different contexts require different
-            approaches, and understanding this is key to effective counter-disinformation work.
-          </p>
-          <a href="/dim" class="btn btn-primary">Learn about the DIM Model</a>
-        </div>
-        <div class="about-cards">
-          <div class="about-card">
-            <div class="about-card-icon">
+      <div class="what-content">
+        <span class="section-label">What is DROG?</span>
+        <h2 class="section-title">A Social Enterprise Fighting Disinformation</h2>
+        <p class="what-intro">
+          DROG is an independent organization based in The Hague that develops innovative interventions
+          to counter disinformation. We don't fact-check — instead, we build people's resilience
+          against manipulation techniques.
+        </p>
+        <div class="what-grid">
+          <div class="what-card">
+            <div class="what-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
               </svg>
             </div>
-            <h3>DIM Model</h3>
-            <p>A framework for understanding the evolution of counter-disinformation efforts.</p>
+            <h3>We Build Games</h3>
+            <p>Interactive experiences like Bad News and Harmony Square that teach people to spot manipulation — by having them create it themselves.</p>
           </div>
-          <div class="about-card">
-            <div class="about-card-icon">
+          <div class="what-card">
+            <div class="what-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <h3>We Do Research</h3>
+            <p>Partnering with Cambridge University and others to develop and test interventions grounded in behavioral science and inoculation theory.</p>
+          </div>
+          <div class="what-card">
+            <div class="what-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                 <circle cx="9" cy="7" r="4"/>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
-            <h3>Community</h3>
-            <p>Connecting practitioners, scientists, and creative techs across Europe.</p>
+            <h3>We Unite Experts</h3>
+            <p>Bringing together practitioners, scientists, donors, artists, and technologists to share knowledge and develop new approaches.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-label">Our Approach</span>
+          <h2 class="section-title">The DIM Model</h2>
+          <p class="about-text">
+            The DROG Disinformation Intervention Model (DIM) categorizes interventions
+            into six generations based on paradigm shifts in the field.
+          </p>
+          <p class="about-text">
+            We believe there are no silver bullets. Different contexts require different
+            approaches — and no single authority can solve the problem alone. That's why we
+            focus on building collective capacity for communities to make sense of information together.
+          </p>
+          <a href="/dim" class="btn btn-primary">Explore the DIM Model</a>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+              </svg>
+            </div>
+            <h3>The Problem</h3>
+            <p>Each generation of interventions was built on a flawed assumption about who has the answer.</p>
           </div>
           <div class="about-card">
             <div class="about-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
               </svg>
             </div>
-            <h3>Research</h3>
-            <p>Science-based interventions grounded in rigorous academic research.</p>
+            <h3>Six Generations</h3>
+            <p>From strategic communication to collective sensemaking — tracing the evolution of approaches.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3>The Path Forward</h3>
+            <p>Building coordination capacity — not finding better authorities, but empowering communities.</p>
           </div>
         </div>
       </div>
@@ -387,6 +436,81 @@ import Layout from '../layouts/Layout.astro';
   .stat-label {
     font-size: 0.875rem;
     color: var(--gray-400);
+  }
+
+  /* What We Do */
+  .what-we-do {
+    background: var(--white);
+  }
+
+  .what-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .what-intro {
+    font-size: 1.25rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .what-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    .what-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .what-card {
+    background: var(--gray-50);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.2s;
+  }
+
+  .what-card:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .what-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--accent);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .what-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--white);
+  }
+
+  .what-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.75rem;
+  }
+
+  .what-card p {
+    color: var(--gray-600);
+    line-height: 1.7;
   }
 
   /* About */

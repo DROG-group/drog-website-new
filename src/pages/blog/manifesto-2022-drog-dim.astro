@@ -1,0 +1,578 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: "Manifesto 2022: A Method to Solve the Definitional Problem",
+  subtitle: "Introducing the DROG Disinformation Intervention Model",
+  date: "January 15, 2022",
+  authors: "DROG Team",
+  category: "DIM",
+  readTime: "10 min read"
+};
+---
+
+<Layout title={post.title} description="The DROG DIM categorizes interventions into six generations based on paradigm shifts in the field of counter-disinformation.">
+  <!-- Hero Section -->
+  <section class="post-hero">
+    <div class="container">
+      <a href="/blog" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Blog
+      </a>
+      <div class="post-meta">
+        <span class="post-category">{post.category}</span>
+        <span class="post-date">{post.date}</span>
+        <span class="post-read-time">{post.readTime}</span>
+      </div>
+      <h1>{post.title}</h1>
+      <p class="post-subtitle">{post.subtitle}</p>
+      <div class="post-authors">
+        <span>By {post.authors}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <article class="post-content">
+    <div class="container">
+      <div class="content-wrapper">
+        <p class="lead">The DROG Disinformation Intervention Model (DROG DIM) categorizes interventions into six "generations" based on paradigm shifts that have occurred in the field of counter-disinformation over the past decade.</p>
+
+        <p>This model serves as a manifesto, offering a framework for understanding the progress and evolution of efforts to counter disinformation.</p>
+
+        <h2>The Problem with Interventions</h2>
+        <p>Before diving into the generations, it's important to understand three key insights about disinformation:</p>
+
+        <div class="insight-cards">
+          <div class="insight-card">
+            <div class="insight-number">1</div>
+            <div class="insight-content">
+              <h4>Gullible individuals do exist; they are exceptions not examples</h4>
+              <p>While some individuals are more susceptible to disinformation, building interventions around the assumption that everyone is gullible misses the complexity of how information spreads and takes hold.</p>
+            </div>
+          </div>
+          <div class="insight-card">
+            <div class="insight-number">2</div>
+            <div class="insight-content">
+              <h4>There are no identical patterns</h4>
+              <p>No Disinformation Campaign is created equal. Campaigns differ over time, spatially, and tactically. Actors, target groups, and methods change. So, the dynamic context is crucially important.</p>
+            </div>
+          </div>
+          <div class="insight-card">
+            <div class="insight-number">3</div>
+            <div class="insight-content">
+              <h4>There are no silver bullets</h4>
+              <p>No single intervention can address all forms of disinformation. Different contexts require different approaches, and understanding this is key to effective counter-disinformation work.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>The Six Generations</h2>
+
+        <div class="generation-card">
+          <div class="gen-header">
+            <span class="gen-badge">Generation 1</span>
+            <span class="gen-year">Since 2014</span>
+          </div>
+          <h3>Information Campaigns</h3>
+          <div class="gen-details">
+            <div class="gen-detail">
+              <span class="detail-label">Problem</span>
+              <span class="detail-value">Foreign interference</span>
+            </div>
+            <div class="gen-detail">
+              <span class="detail-label">Deficit Model</span>
+              <span class="detail-value">Education</span>
+            </div>
+          </div>
+          <p>The first generation emerged in response to foreign interference and was built on the belief that citizens need access to proper information and new skills to distinguish false narratives from true narratives.</p>
+        </div>
+
+        <div class="generation-card">
+          <div class="gen-header">
+            <span class="gen-badge">Generation 2</span>
+            <span class="gen-year">Since 2014</span>
+          </div>
+          <h3>Fact-Checking</h3>
+          <div class="gen-details">
+            <div class="gen-detail">
+              <span class="detail-label">Problem</span>
+              <span class="detail-value">Truth decay</span>
+            </div>
+            <div class="gen-detail">
+              <span class="detail-label">Deficit Model</span>
+              <span class="detail-value">Verified information</span>
+            </div>
+          </div>
+          <p>The second generation assumes that once everyone has access to the relevant facts, constructive debates become possible because polarization disappears.</p>
+        </div>
+
+        <div class="generation-card">
+          <div class="gen-header">
+            <span class="gen-badge">Generation 3</span>
+            <span class="gen-year">Since 2016</span>
+          </div>
+          <h3>Prebunking</h3>
+          <div class="gen-details">
+            <div class="gen-detail">
+              <span class="detail-label">Problem</span>
+              <span class="detail-value">Manipulation of domestic vulnerabilities</span>
+            </div>
+            <div class="gen-detail">
+              <span class="detail-label">Deficit Model</span>
+              <span class="detail-value">Rationality</span>
+            </div>
+          </div>
+          <p>By letting potential receivers experience how disinformation is created and spread, they are getting inoculated against manipulation techniques.</p>
+        </div>
+
+        <div class="generation-card">
+          <div class="gen-header">
+            <span class="gen-badge">Generation 4</span>
+            <span class="gen-year">Since 2018</span>
+          </div>
+          <h3>(Self-)Censorship</h3>
+          <div class="gen-details">
+            <div class="gen-detail">
+              <span class="detail-label">Problem</span>
+              <span class="detail-value">Demagogues amplified by domestic spreaders</span>
+            </div>
+            <div class="gen-detail">
+              <span class="detail-label">Deficit Model</span>
+              <span class="detail-value">Gatekeeping</span>
+            </div>
+          </div>
+          <p>By restricting and sanctioning the transmission of disinformation, its reach and effect is diminished.</p>
+        </div>
+
+        <div class="generation-card">
+          <div class="gen-header">
+            <span class="gen-badge">Generation 5</span>
+            <span class="gen-year">Since 2022</span>
+          </div>
+          <h3>Group Communication</h3>
+          <div class="gen-details">
+            <div class="gen-detail">
+              <span class="detail-label">Problem</span>
+              <span class="detail-value">Societal alienation</span>
+            </div>
+            <div class="gen-detail">
+              <span class="detail-label">Deficit Model</span>
+              <span class="detail-value">Social interactions</span>
+            </div>
+          </div>
+          <p>People change their minds mainly by interacting with other people. Under the right conditions, others can help us find errors in our beliefs, as we can help others find errors in theirs.</p>
+        </div>
+
+        <div class="generation-card generation-highlight">
+          <div class="gen-header">
+            <span class="gen-badge">Generation 6</span>
+            <span class="gen-year">Emerging</span>
+          </div>
+          <h3>Collective Sensemaking</h3>
+          <div class="gen-details">
+            <div class="gen-detail">
+              <span class="detail-label">Problem</span>
+              <span class="detail-value">Fragmented reality</span>
+            </div>
+            <div class="gen-detail">
+              <span class="detail-label">Approach</span>
+              <span class="detail-value">Coordination capacity</span>
+            </div>
+          </div>
+          <p>No authority has the answer. Communities must develop their own capacity for collective sensemaking and coordinate responses together.</p>
+        </div>
+
+        <h2>Moving Forward</h2>
+        <p>The DROG DIM model is not about declaring one generation better than another. Each generation represents a response to specific challenges and contexts. The key is understanding when and how to apply different approaches.</p>
+
+        <p>As we continue to develop Generation 6 interventions focused on collective sensemaking, we remain committed to learning from all previous generations while pushing the boundaries of what's possible in counter-disinformation work.</p>
+
+        <!-- CTA Section -->
+        <div class="post-cta">
+          <h3>Explore the full DIM Model</h3>
+          <p>Dive deeper into each generation and discover how they're being applied today.</p>
+          <div class="cta-buttons">
+            <a href="/dim" class="btn btn-primary">Explore DIM Model</a>
+            <a href="/community" class="btn btn-outline">Join Community</a>
+          </div>
+        </div>
+
+        <!-- Related Posts -->
+        <div class="related-posts">
+          <h3>Related Articles</h3>
+          <div class="related-grid">
+            <a href="/blog/standard-disinformation-model" class="related-card">
+              <span class="related-category">DIM</span>
+              <h4>The Standard Disinformation Model</h4>
+              <span class="related-date">February 2023</span>
+            </a>
+            <a href="/blog/interactivist-interventions" class="related-card">
+              <span class="related-category">Research</span>
+              <h4>Explore Interactivist Interventions</h4>
+              <span class="related-date">June 2023</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .post-hero {
+    padding: 10rem 0 4rem;
+    background: linear-gradient(-45deg, #1e3a5f, #1e293b, #312e81, #1e3a5f);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+    color: var(--white);
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .post-hero .container {
+    max-width: 800px;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-400);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: var(--white);
+  }
+
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .post-category {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .post-date,
+  .post-read-time {
+    color: var(--gray-400);
+  }
+
+  .post-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .post-hero h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .post-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .post-authors {
+    color: var(--gray-400);
+    font-size: 0.95rem;
+  }
+
+  /* Content */
+  .post-content {
+    padding: 4rem 0;
+  }
+
+  .content-wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .content-wrapper p {
+    font-size: 1.125rem;
+    line-height: 1.9;
+    color: var(--gray-700);
+    margin-bottom: 1.5rem;
+  }
+
+  .content-wrapper .lead {
+    font-size: 1.25rem;
+    color: var(--gray-600);
+    border-left: 4px solid var(--primary);
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .content-wrapper h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 3rem 0 1.5rem;
+  }
+
+  .content-wrapper h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: 0 0 1rem;
+  }
+
+  /* Insight Cards */
+  .insight-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .insight-card {
+    display: flex;
+    gap: 1.5rem;
+    background: var(--gray-50);
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .insight-number {
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .insight-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .insight-content p {
+    font-size: 0.95rem !important;
+    margin: 0;
+    color: var(--gray-600);
+  }
+
+  /* Generation Cards */
+  .generation-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    transition: all 0.2s;
+  }
+
+  .generation-card:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .generation-highlight {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    border: none;
+  }
+
+  .generation-highlight h3 {
+    color: var(--white);
+  }
+
+  .generation-highlight p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .generation-highlight .gen-badge {
+    background: var(--white);
+    color: var(--primary);
+  }
+
+  .generation-highlight .gen-year,
+  .generation-highlight .detail-label {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .generation-highlight .detail-value {
+    color: var(--white);
+  }
+
+  .gen-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .gen-badge {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.375rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .gen-year {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    font-family: var(--font-mono);
+  }
+
+  .gen-details {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .gen-detail {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail-label {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .detail-value {
+    font-weight: 600;
+    color: var(--gray-900);
+  }
+
+  .generation-card p {
+    margin: 0;
+    font-size: 1rem !important;
+  }
+
+  /* CTA */
+  .post-cta {
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .post-cta h3 {
+    color: var(--white);
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  .post-cta p {
+    color: var(--gray-400);
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--gray-600);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Related Posts */
+  .related-posts {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--gray-200);
+  }
+
+  .related-posts > h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 1.5rem;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .related-card {
+    background: var(--gray-50);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: all 0.2s;
+  }
+
+  .related-card:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .related-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .related-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: 0.5rem 0;
+    line-height: 1.4;
+  }
+
+  .related-date {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+  }
+</style>

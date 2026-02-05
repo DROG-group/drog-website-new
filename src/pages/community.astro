@@ -21,60 +21,85 @@ import Layout from '../layouts/Layout.astro';
         <p class="section-description">Everyone has a part to play in fighting disinformation</p>
       </div>
       <div class="roles-grid">
-        <div class="role-card">
-          <div class="role-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span class="flip-label">Practitioners</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Practitioners</h3>
+              <p>Professionals working on the front lines of counter-disinformation.</p>
+              <a href="/contact" class="btn btn-primary btn-sm">I want to help</a>
+            </div>
           </div>
-          <h3>Practitioners</h3>
-          <p>Professionals working on the front lines of counter-disinformation. Share your experience and learn from others.</p>
-          <a href="/contact" class="btn btn-outline btn-sm">I want to help</a>
         </div>
-        <div class="role-card">
-          <div class="role-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2M9 8h2M10 18V6a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v12"/>
-            </svg>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2M9 8h2M10 18V6a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v12"/>
+              </svg>
+              <span class="flip-label">Scientists</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Scientists</h3>
+              <p>Researchers and academics studying disinformation.</p>
+              <a href="/contact" class="btn btn-primary btn-sm">I have a tech transfer</a>
+            </div>
           </div>
-          <h3>Scientists</h3>
-          <p>Researchers and academics studying disinformation. Transfer your technology and findings to real-world applications.</p>
-          <a href="/contact" class="btn btn-outline btn-sm">I have a tech transfer</a>
         </div>
-        <div class="role-card">
-          <div class="role-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+              <span class="flip-label">Donors</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Donors</h3>
+              <p>Funders and investors supporting counter-disinformation initiatives.</p>
+              <a href="/contact" class="btn btn-primary btn-sm">Can I invest?</a>
+            </div>
           </div>
-          <h3>Donors</h3>
-          <p>Funders and investors supporting counter-disinformation initiatives. Find impactful projects to support.</p>
-          <a href="/contact" class="btn btn-outline btn-sm">Can I invest in an initiative?</a>
         </div>
-        <div class="role-card">
-          <div class="role-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="13.5" cy="6.5" r="0.5"/>
-              <circle cx="17.5" cy="10.5" r="0.5"/>
-              <circle cx="8.5" cy="7.5" r="0.5"/>
-              <circle cx="6.5" cy="12.5" r="0.5"/>
-              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"/>
-            </svg>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="13.5" cy="6.5" r="0.5"/>
+                <circle cx="17.5" cy="10.5" r="0.5"/>
+                <circle cx="8.5" cy="7.5" r="0.5"/>
+                <circle cx="6.5" cy="12.5" r="0.5"/>
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"/>
+              </svg>
+              <span class="flip-label">Artists</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Artists</h3>
+              <p>Creative minds bringing counter-disinformation messages to life.</p>
+              <a href="/contact" class="btn btn-primary btn-sm">I want to create</a>
+            </div>
           </div>
-          <h3>Artists</h3>
-          <p>Creative minds bringing counter-disinformation messages to life through art, design, and storytelling.</p>
-          <a href="/contact" class="btn btn-outline btn-sm">I want to create</a>
         </div>
-        <div class="role-card">
-          <div class="role-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="16 18 22 12 16 6"/>
-              <polyline points="8 6 2 12 8 18"/>
-            </svg>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+              <span class="flip-label">Creative Techs</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Creative Techs</h3>
+              <p>Developers and technologists building tools to counter disinformation.</p>
+              <a href="/contact" class="btn btn-primary btn-sm">Can I join?</a>
+            </div>
           </div>
-          <h3>Creative Techs</h3>
-          <p>Developers and technologists building tools to detect and counter disinformation.</p>
-          <a href="/contact" class="btn btn-outline btn-sm">Can I join, please?</a>
         </div>
       </div>
     </div>
@@ -90,7 +115,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="benefits-grid">
         <div class="benefit-card">
-          <div class="benefit-number">100+</div>
+          <div class="benefit-number"><span class="counter" data-target="100">0</span>+</div>
           <h3>Network</h3>
           <p>Connect with professionals across Europe fighting disinformation.</p>
         </div>
@@ -119,7 +144,7 @@ import Layout from '../layouts/Layout.astro';
           <p>Find projects, gigs, and funding opportunities in the counter-disinformation space.</p>
         </div>
         <div class="benefit-card">
-          <div class="benefit-number">30M+</div>
+          <div class="benefit-number"><span class="counter" data-target="30">0</span>M+</div>
           <h3>Impact</h3>
           <p>Be part of initiatives that have reached citizens across Europe.</p>
         </div>
@@ -255,9 +280,17 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .page-hero {
     padding: 10rem 0 4rem;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    background: linear-gradient(-45deg, #f59e0b, #d97706, #fbbf24, #f59e0b);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
     text-align: center;
     color: var(--white);
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   .page-hero .section-label {
@@ -283,7 +316,7 @@ import Layout from '../layouts/Layout.astro';
     background: var(--gray-50);
   }
 
-  /* Roles Grid */
+  /* Roles Grid - Flip Cards */
   .roles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -302,43 +335,76 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
-  .role-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.2s;
+  .flip-card {
+    background: transparent;
+    width: 100%;
+    height: 220px;
+    perspective: 1000px;
   }
 
-  .role-card:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
   }
 
-  .role-icon {
-    width: 64px;
-    height: 64px;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     border-radius: 16px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .flip-card-front {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
     color: var(--white);
   }
 
-  .role-card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: var(--gray-900);
+  .flip-card-front svg {
+    margin-bottom: 1rem;
+    opacity: 0.9;
   }
 
-  .role-card p {
+  .flip-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .flip-card-back {
+    background: var(--white);
+    color: var(--gray-900);
+    transform: rotateY(180deg);
+    box-shadow: var(--shadow-xl);
+    text-align: center;
+  }
+
+  .flip-card-back h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .flip-card-back p {
     color: var(--gray-600);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
   }
 
   .btn-sm {
@@ -505,3 +571,39 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 2rem;
   }
 </style>
+
+<script>
+  // Animated counter function
+  function animateCounter(element: HTMLElement) {
+    const target = parseInt(element.dataset.target || '0', 10);
+    const duration = 2000;
+    const start = 0;
+    const startTime = performance.now();
+
+    function update(currentTime: number) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const current = Math.floor(easeOutQuart * (target - start) + start);
+      element.textContent = current.toString();
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        element.textContent = target.toString();
+      }
+    }
+    requestAnimationFrame(update);
+  }
+
+  const counters = document.querySelectorAll('.counter');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target as HTMLElement);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer.observe(counter));
+</script>

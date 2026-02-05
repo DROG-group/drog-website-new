@@ -20,35 +20,50 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="section-title">What We Stand For</h2>
       </div>
       <div class="mission-grid">
-        <div class="mission-card">
-          <div class="mission-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span class="flip-label">European-Centered</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>European-Centered</h3>
+              <p>Building bridges across European counter-disinformation communities to share knowledge and amplify impact.</p>
+            </div>
           </div>
-          <h3>European-Centered</h3>
-          <p>Building bridges across European counter-disinformation communities to share knowledge and amplify impact.</p>
         </div>
-        <div class="mission-card">
-          <div class="mission-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2M9 8h2M10 18V6a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v12"/>
-            </svg>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2M9 8h2M10 18V6a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v12"/>
+              </svg>
+              <span class="flip-label">Science-Based</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Science-Based</h3>
+              <p>Grounding interventions in rigorous academic research and continuously testing our approaches.</p>
+            </div>
           </div>
-          <h3>Science-Based</h3>
-          <p>Grounding interventions in rigorous academic research and continuously testing our approaches.</p>
         </div>
-        <div class="mission-card">
-          <div class="mission-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <span class="flip-label">Community-Driven</span>
+            </div>
+            <div class="flip-card-back">
+              <h3>Community-Driven</h3>
+              <p>Uniting diverse expertise for collective impact against disinformation threats.</p>
+            </div>
           </div>
-          <h3>Community-Driven</h3>
-          <p>Uniting diverse expertise for collective impact against disinformation threats.</p>
         </div>
       </div>
     </div>
@@ -196,8 +211,16 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .page-hero {
     padding: 10rem 0 4rem;
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+    background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #f5f3ff, #fef3c7);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
     text-align: center;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   .page-hero h1 {
@@ -220,7 +243,7 @@ import Layout from '../layouts/Layout.astro';
     background: var(--gray-50);
   }
 
-  /* Mission Grid */
+  /* Mission Grid - Flip Cards */
   .mission-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -233,42 +256,75 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
-  .mission-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.2s;
+  .flip-card {
+    background: transparent;
+    width: 100%;
+    height: 220px;
+    perspective: 1000px;
   }
 
-  .mission-card:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
   }
 
-  .mission-icon {
-    width: 64px;
-    height: 64px;
-    background: var(--gray-100);
-    border-radius: 50%;
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    color: var(--primary);
+    padding: 2rem;
   }
 
-  .mission-card h3 {
+  .flip-card-front {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+  }
+
+  .flip-card-front svg {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+
+  .flip-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .flip-card-back {
+    background: var(--white);
+    color: var(--gray-900);
+    transform: rotateY(180deg);
+    box-shadow: var(--shadow-xl);
+    text-align: center;
+  }
+
+  .flip-card-back h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
     color: var(--gray-900);
+    margin-bottom: 0.75rem;
   }
 
-  .mission-card p {
+  .flip-card-back p {
     color: var(--gray-600);
     line-height: 1.7;
+    font-size: 0.95rem;
   }
 
   /* Story */

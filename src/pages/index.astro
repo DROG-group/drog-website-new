@@ -43,19 +43,19 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item">
-          <span class="stat-value">30M+</span>
+          <span class="stat-value"><span class="counter" data-target="30">0</span>M+</span>
           <span class="stat-label">Citizens Reached</span>
         </div>
         <div class="stat-item">
-          <span class="stat-value">100+</span>
+          <span class="stat-value"><span class="counter" data-target="100">0</span>+</span>
           <span class="stat-label">Ideas Generated</span>
         </div>
         <div class="stat-item">
-          <span class="stat-value">20+</span>
+          <span class="stat-value"><span class="counter" data-target="20">0</span>+</span>
           <span class="stat-label">Projects Funded</span>
         </div>
         <div class="stat-item">
-          <span class="stat-value">4+</span>
+          <span class="stat-value"><span class="counter" data-target="4">0</span>+</span>
           <span class="stat-label">Spin-Outs Raised</span>
         </div>
       </div>
@@ -74,34 +74,49 @@ import Layout from '../layouts/Layout.astro';
           <p>Through our DIM (Disinformation Intervention Model), we've mapped out six generations of counter-disinformation interventions, each responding to different challenges and paradigms.</p>
         </div>
         <div class="what-grid">
-          <div class="what-card">
-            <div class="what-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <span class="flip-label">We Unite Experts</span>
+              </div>
+              <div class="flip-card-back">
+                <h3>We Unite Experts</h3>
+                <p>Practitioners, Scientists, Donors, Artists, and Creative Techs — working together to counter information manipulation.</p>
+              </div>
             </div>
-            <h3>We Unite Experts</h3>
-            <p>Practitioners, Scientists, Donors, Artists, and Creative Techs — working together to counter information manipulation.</p>
           </div>
-          <div class="what-card">
-            <div class="what-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="flip-label">DIM Model</span>
+              </div>
+              <div class="flip-card-back">
+                <h3>DIM Model</h3>
+                <p>Our Disinformation Intervention Model categorizes approaches into six generations based on paradigm shifts in the field.</p>
+              </div>
             </div>
-            <h3>DIM Model</h3>
-            <p>Our Disinformation Intervention Model categorizes approaches into six generations based on paradigm shifts in the field.</p>
           </div>
-          <div class="what-card">
-            <div class="what-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-              </svg>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+                <span class="flip-label">Interventions</span>
+              </div>
+              <div class="flip-card-back">
+                <h3>Independent Interventions</h3>
+                <p>Projects born at DROG have reached over 30 million citizens with innovative approaches to building resilience.</p>
+              </div>
             </div>
-            <h3>Independent Interventions</h3>
-            <p>Projects born at DROG have reached over 30 million citizens with innovative approaches to building resilience.</p>
           </div>
         </div>
       </div>
@@ -273,7 +288,21 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     align-items: center;
     padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+    background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #f5f3ff, #fef3c7);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .hero-container {
@@ -507,45 +536,78 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
-  .what-card {
-    background: var(--gray-50);
+  /* Flip Cards */
+  .flip-card {
+    background: transparent;
+    width: 100%;
+    height: 250px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     border-radius: 16px;
-    padding: 2rem;
-    transition: all 0.2s;
-  }
-
-  .what-card:hover {
-    background: var(--white);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .what-icon {
-    width: 56px;
-    height: 56px;
-    background: var(--primary);
-    border-radius: 14px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    padding: 2rem;
   }
 
-  .what-icon svg {
-    width: 28px;
-    height: 28px;
+  .flip-card-front {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
   }
 
-  .what-card h3 {
+  .flip-card-front svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+
+  .flip-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .flip-card-back {
+    background: var(--white);
+    color: var(--gray-900);
+    transform: rotateY(180deg);
+    box-shadow: var(--shadow-xl);
+    text-align: center;
+  }
+
+  .flip-card-back h3 {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--gray-900);
     margin-bottom: 0.75rem;
   }
 
-  .what-card p {
+  .flip-card-back p {
     color: var(--gray-600);
     line-height: 1.7;
+    font-size: 0.95rem;
   }
 
   /* About */
@@ -805,3 +867,51 @@ import Layout from '../layouts/Layout.astro';
     border-color: var(--white);
   }
 </style>
+
+<script>
+  // Animated counter function
+  function animateCounter(element: HTMLElement) {
+    const target = parseInt(element.dataset.target || '0', 10);
+    const duration = 2000; // 2 seconds
+    const start = 0;
+    const startTime = performance.now();
+
+    function update(currentTime: number) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Easing function for smooth deceleration
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const current = Math.floor(easeOutQuart * (target - start) + start);
+
+      element.textContent = current.toString();
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        element.textContent = target.toString();
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  // Intersection Observer to trigger animation when stats come into view
+  const counters = document.querySelectorAll('.counter');
+  const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target as HTMLElement;
+        animateCounter(counter);
+        observer.unobserve(counter); // Only animate once
+      }
+    });
+  }, observerOptions);
+
+  counters.forEach(counter => observer.observe(counter));
+</script>

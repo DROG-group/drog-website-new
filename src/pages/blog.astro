@@ -4,34 +4,54 @@ import Layout from '../layouts/Layout.astro';
 const posts = [
   {
     title: "The Standard Disinformation Model: Understanding Content Pollution",
-    description: "The field of counter-disinformation is cluttered with interventions, definitions, and approaches. To make sense of it all, we need to start with the basics: what actually is disinformation, and how do governments justify intervening against it?",
+    description: "The field of counter-disinformation is cluttered with interventions, definitions, and approaches. To make sense of it all, we need to start with the basics.",
     category: "DIM",
-    tags: ["definition", "framework", "theory", "pollution-model"],
-    slug: "standard-disinformation-model"
+    date: "Feb 15, 2023",
+    readTime: "8 min",
+    tags: ["definition", "framework", "theory"],
+    slug: "standard-disinformation-model",
+    color: "blue",
+    icon: "layers",
+    featured: true
   },
   {
     title: "Harmony Square",
-    subtitle: "What is Harmony Square?",
-    description: "Harmony Square is a game about fake news. The game's setting is the idyllic Harmony Square, a small neighborhood mildly obsessed with democracy. You, the player, are hired as Chief Disinformation Officer.",
+    subtitle: "A Game About Fake News",
+    description: "Harmony Square is a game about fake news. You, the player, are hired as Chief Disinformation Officer to learn how manipulation works.",
     category: "Case Studies",
+    date: "Dec 1, 2024",
+    readTime: "5 min",
     tags: ["prebunking", "game", "inoculation"],
-    slug: "harmony-square"
+    slug: "harmony-square",
+    color: "purple",
+    icon: "gamepad"
   },
   {
-    title: "Manifesto 2022: a method to solve the definitional problem",
-    description: "The DROG Disinformation Intervention Model (DROG DIM) categorizes interventions into five 'generations' based on paradigm shifts that have occurred in the field of counter-disinformation over the past decade.",
+    title: "Manifesto 2022: A Method to Solve the Definitional Problem",
+    description: "The DROG DIM categorizes interventions into six 'generations' based on paradigm shifts in counter-disinformation.",
     category: "DIM",
+    date: "Jan 15, 2022",
+    readTime: "10 min",
     tags: ["dim", "theory", "framework"],
-    slug: "manifesto-2022-drog-dim"
+    slug: "manifesto-2022-drog-dim",
+    color: "blue",
+    icon: "book"
   },
   {
-    title: "Explore the next generation of 'INTERACTIVISTS' interventions",
-    description: "Your disinformation interventions must constantly deal with, and adapt to new circumstances, whilst taking on board scientific insights and field lab testing. Read more about these so-called 'Interactivist' 5th-generation interventions.",
+    title: "Explore the Next Generation of Interactivist Interventions",
+    description: "Your disinformation interventions must constantly adapt to new circumstances. Read about 5th-generation 'Interactivist' interventions.",
     category: "Research",
+    date: "Jun 20, 2023",
+    readTime: "6 min",
     tags: ["gen-5", "interactivist", "interventions"],
-    slug: "interactivist-interventions"
+    slug: "interactivist-interventions",
+    color: "green",
+    icon: "users"
   }
 ];
+
+const featuredPost = posts.find(p => p.featured);
+const regularPosts = posts.filter(p => !p.featured);
 ---
 
 <Layout title="Blog" description="Read up on our latest publications and learn about the DROG DIM model">
@@ -39,38 +59,166 @@ const posts = [
   <section class="page-hero">
     <div class="container">
       <span class="section-label">Publications</span>
-      <h1>Blog</h1>
-      <p class="hero-subtitle">Read up on our latest publications. Learn all about our DIM model: a method to solve the definitional problem.</p>
+      <h1>Blog & Research</h1>
+      <p class="hero-subtitle">Explore our publications on counter-disinformation. Learn about the DIM model and our research into fighting information manipulation.</p>
     </div>
   </section>
+
+  <!-- Featured Post -->
+  {featuredPost && (
+    <section class="featured-section">
+      <div class="container">
+        <a href={`/blog/${featuredPost.slug}`} class="featured-card">
+          <div class="featured-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Featured Article
+          </div>
+          <div class="featured-content">
+            <div class="featured-meta">
+              <span class="featured-category">{featuredPost.category}</span>
+              <span class="featured-date">{featuredPost.date}</span>
+              <span class="featured-read">{featuredPost.readTime} read</span>
+            </div>
+            <h2>{featuredPost.title}</h2>
+            <p>{featuredPost.description}</p>
+            <span class="featured-link">
+              Read Article
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
+          <div class="featured-visual">
+            <div class="featured-icon">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  )}
 
   <!-- Blog Posts Section -->
   <section class="section">
     <div class="container">
       <!-- Filter Bar -->
       <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="case-studies">Case Studies</button>
-        <button class="filter-btn" data-filter="research">Research</button>
-        <button class="filter-btn" data-filter="dim">DIM Model</button>
+        <button class="filter-btn active" data-filter="all">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          All
+        </button>
+        <button class="filter-btn" data-filter="case-studies">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="6" width="20" height="12" rx="2"/>
+            <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/>
+          </svg>
+          Case Studies
+        </button>
+        <button class="filter-btn" data-filter="research">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2M9 8h2M10 18V6a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v12"/>
+          </svg>
+          Research
+        </button>
+        <button class="filter-btn" data-filter="dim">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          DIM Model
+        </button>
       </div>
 
       <!-- Posts Grid -->
       <div class="posts-grid">
-        {posts.map((post) => (
-          <article class="post-card" data-category={post.category.toLowerCase().replace(' ', '-')}>
-            <span class="post-category">{post.category}</span>
-            <h2>{post.title}</h2>
-            {post.subtitle && <h3 class="post-subtitle">{post.subtitle}</h3>}
-            <p>{post.description}</p>
-            <div class="post-tags">
-              {post.tags.map((tag) => (
-                <span class="tag">{tag}</span>
-              ))}
+        {regularPosts.map((post) => (
+          <article class={`post-card post-card-${post.color}`} data-category={post.category.toLowerCase().replace(' ', '-')}>
+            <div class="card-header">
+              <div class="card-icon">
+                {post.icon === 'gamepad' && (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="6" width="20" height="12" rx="2"/>
+                    <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/>
+                  </svg>
+                )}
+                {post.icon === 'book' && (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  </svg>
+                )}
+                {post.icon === 'users' && (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                )}
+                {post.icon === 'layers' && (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                )}
+              </div>
+              <span class="card-category">{post.category}</span>
             </div>
-            <a href={`/blog/${post.slug}`} class="read-more">Read More &rarr;</a>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-date">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                  {post.date}
+                </span>
+                <span class="card-read">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  {post.readTime}
+                </span>
+              </div>
+              <h2>{post.title}</h2>
+              {post.subtitle && <h3 class="card-subtitle">{post.subtitle}</h3>}
+              <p>{post.description}</p>
+              <div class="card-tags">
+                {post.tags.map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+              <a href={`/blog/${post.slug}`} class="read-more">
+                Read Article
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
           </article>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-content">
+          <h3>Stay Updated</h3>
+          <p>Get the latest research and publications delivered to your inbox.</p>
+        </div>
+        <a href="/contact" class="btn btn-primary">Get in Touch</a>
       </div>
     </div>
   </section>
@@ -105,6 +253,123 @@ const posts = [
     margin: 0 auto;
   }
 
+  /* Featured Section */
+  .featured-section {
+    padding: 0 0 2rem;
+    margin-top: -2rem;
+  }
+
+  .featured-card {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    background: linear-gradient(135deg, var(--gray-900) 0%, #1e3a5f 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    color: var(--white);
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (max-width: 768px) {
+    .featured-card {
+      grid-template-columns: 1fr;
+    }
+    .featured-visual {
+      display: none;
+    }
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: var(--gray-900);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .featured-content {
+    padding: 4rem 3rem;
+  }
+
+  .featured-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .featured-category {
+    background: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .featured-date,
+  .featured-read {
+    color: var(--gray-400);
+  }
+
+  .featured-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .featured-card p {
+    color: var(--gray-400);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .featured-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    transition: gap 0.2s;
+  }
+
+  .featured-card:hover .featured-link {
+    gap: 1rem;
+  }
+
+  .featured-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .featured-icon {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+  }
+
   /* Filter Bar */
   .filter-bar {
     display: flex;
@@ -114,9 +379,12 @@ const posts = [
   }
 
   .filter-btn {
-    background: var(--gray-100);
-    border: none;
-    padding: 0.625rem 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    padding: 0.75rem 1.25rem;
     border-radius: 100px;
     font-size: 0.875rem;
     font-weight: 500;
@@ -126,22 +394,30 @@ const posts = [
   }
 
   .filter-btn:hover {
-    background: var(--gray-200);
+    background: var(--gray-50);
+    border-color: var(--gray-300);
   }
 
   .filter-btn.active {
     background: var(--gray-900);
+    border-color: var(--gray-900);
     color: var(--white);
   }
 
   /* Posts Grid */
   .posts-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
     .posts-grid {
       grid-template-columns: 1fr;
     }
@@ -149,40 +425,95 @@ const posts = [
 
   .post-card {
     background: var(--white);
-    border: 1px solid var(--gray-200);
-    border-radius: 16px;
-    padding: 2rem;
-    transition: all 0.2s;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   .post-card:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-6px);
   }
 
-  .post-category {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 600;
+  /* Card Header Colors */
+  .card-header {
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .post-card-blue .card-header {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: var(--white);
+  }
+
+  .post-card-purple .card-header {
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    color: var(--white);
+  }
+
+  .post-card-green .card-header {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: var(--white);
+  }
+
+  .post-card-orange .card-header {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: var(--white);
+  }
+
+  .card-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-category {
+    font-size: 0.7rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--primary);
-    background: rgba(37, 99, 235, 0.1);
+    letter-spacing: 0.1em;
+    background: rgba(255, 255, 255, 0.2);
     padding: 0.375rem 0.75rem;
     border-radius: 6px;
+  }
+
+  /* Card Body */
+  .card-body {
+    padding: 1.5rem 2rem 2rem;
+  }
+
+  .card-meta {
+    display: flex;
+    gap: 1rem;
     margin-bottom: 1rem;
   }
 
+  .card-date,
+  .card-read {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+  }
+
   .post-card h2 {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--gray-900);
     margin-bottom: 0.5rem;
-    line-height: 1.3;
+    line-height: 1.4;
   }
 
-  .post-subtitle {
-    font-size: 1rem;
+  .card-subtitle {
+    font-size: 0.95rem;
     font-weight: 500;
     color: var(--primary);
     margin-bottom: 0.75rem;
@@ -190,11 +521,12 @@ const posts = [
 
   .post-card p {
     color: var(--gray-600);
+    font-size: 0.95rem;
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
-  .post-tags {
+  .card-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -202,25 +534,66 @@ const posts = [
   }
 
   .tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 500;
     background: var(--gray-100);
-    color: var(--gray-700);
-    padding: 0.25rem 0.75rem;
+    color: var(--gray-600);
+    padding: 0.25rem 0.625rem;
     border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
   }
 
   .read-more {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--gray-900);
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
-    transition: color 0.2s;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    transition: all 0.2s;
   }
 
   .read-more:hover {
     color: var(--primary);
+    gap: 0.75rem;
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    padding: 0 0 4rem;
+  }
+
+  .newsletter-card {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .newsletter-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .newsletter-content p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+  }
+
+  .newsletter-card .btn {
+    background: var(--white);
+    color: var(--gray-900);
+  }
+
+  .newsletter-card .btn:hover {
+    background: var(--gray-100);
   }
 </style>
 

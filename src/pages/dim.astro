@@ -22,77 +22,429 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Decade Timeline Section -->
-  <section class="section timeline-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Context</span>
-        <h2 class="section-title">The Decade of Disinformation</h2>
-        <p class="section-description">Key events that shaped each generation of interventions</p>
+  <!-- Immersive Timeline Section -->
+  <section class="immersive-timeline">
+    <div class="timeline-intro">
+      <div class="container">
+        <span class="section-label">The Journey</span>
+        <h2>The Decade of Disinformation</h2>
+        <p>Scroll through the events that shaped our understanding of information warfare — and the interventions that emerged in response.</p>
+        <div class="scroll-indicator">
+          <span>Scroll to explore</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </div>
       </div>
-      <div class="decade-timeline">
-        <div class="timeline-item">
-          <div class="timeline-year">2014</div>
-          <div class="timeline-events">
-            <span class="event event-blue">Crimea / Hybrid Warfare</span>
-            <span class="event event-green">ISIS Recruitment</span>
-            <span class="event event-purple">MH17</span>
+    </div>
+
+    <div class="timeline-track">
+      <div class="timeline-line"></div>
+
+      <!-- 2014 -->
+      <div class="timeline-entry" data-year="2014" data-gen="1">
+        <div class="entry-marker">
+          <span class="marker-year">2014</span>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="entry-card">
+          <div class="card-header header-blue">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <span class="gen-badge">GEN 1 Emerges</span>
+          </div>
+          <div class="card-content">
+            <h3>The Awakening</h3>
+            <div class="event-list">
+              <div class="event-item">
+                <span class="event-dot blue"></span>
+                <div class="event-info">
+                  <strong>Crimea & Hybrid Warfare</strong>
+                  <p>Russia's annexation combined military action with sophisticated information operations. The West had no playbook.</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <span class="event-dot green"></span>
+                <div class="event-info">
+                  <strong>ISIS Online Recruitment</strong>
+                  <p>Terrorist organizations mastered social media for radicalization and recruitment.</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <span class="event-dot purple"></span>
+                <div class="event-info">
+                  <strong>MH17 Shootdown</strong>
+                  <p>Competing narratives emerged instantly. Truth became a battlefield.</p>
+                </div>
+              </div>
+            </div>
+            <div class="intervention-response">
+              <div class="response-label">The Response</div>
+              <div class="response-content">
+                <strong>Strategic Communication</strong>
+                <p>If adversaries spread propaganda, counter with truth. Governments established StratCom units and funded independent journalism.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2016</div>
-          <div class="timeline-events">
-            <span class="event event-orange">US Election Interference</span>
+      </div>
+
+      <!-- 2016 -->
+      <div class="timeline-entry" data-year="2016" data-gen="2">
+        <div class="entry-marker">
+          <span class="marker-year">2016</span>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="entry-card">
+          <div class="card-header header-orange">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                <line x1="4" y1="22" x2="4" y2="15"/>
+              </svg>
+            </div>
+            <span class="gen-badge">GEN 2 Emerges</span>
+          </div>
+          <div class="card-content">
+            <h3>The Election Shock</h3>
+            <div class="event-list">
+              <div class="event-item">
+                <span class="event-dot orange"></span>
+                <div class="event-info">
+                  <strong>US Election Interference</strong>
+                  <p>Russian troll farms, leaked emails, and viral misinformation. "Fake news" entered the mainstream vocabulary.</p>
+                </div>
+              </div>
+            </div>
+            <div class="intervention-response">
+              <div class="response-label">The Response</div>
+              <div class="response-content">
+                <strong>Debunking & Fact-Checking</strong>
+                <p>Verify claims, label them true or false, trust people will update their beliefs. Platforms partnered with fact-checkers at scale.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2018</div>
-          <div class="timeline-events">
-            <span class="event event-blue">Cambridge Analytica</span>
+      </div>
+
+      <!-- 2018 -->
+      <div class="timeline-entry" data-year="2018" data-gen="3">
+        <div class="entry-marker">
+          <span class="marker-year">2018</span>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="entry-card">
+          <div class="card-header header-purple">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <span class="gen-badge">GEN 3 Emerges</span>
+          </div>
+          <div class="card-content">
+            <h3>The Data Scandal</h3>
+            <div class="event-list">
+              <div class="event-item">
+                <span class="event-dot purple"></span>
+                <div class="event-info">
+                  <strong>Cambridge Analytica</strong>
+                  <p>Psychological profiling meets political manipulation. The scale of data exploitation was revealed.</p>
+                </div>
+              </div>
+            </div>
+            <div class="intervention-response">
+              <div class="response-label">The Response</div>
+              <div class="response-content">
+                <strong>Prebunking & Inoculation</strong>
+                <p>Instead of correcting falsehoods, teach people to recognize manipulation techniques. Games like Bad News were born.</p>
+              </div>
+            </div>
+            <div class="drog-highlight">
+              <span class="drog-badge">DROG Creates Bad News</span>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2020</div>
-          <div class="timeline-events">
-            <span class="event event-green">COVID-19 Infodemic</span>
+      </div>
+
+      <!-- 2020 -->
+      <div class="timeline-entry" data-year="2020" data-gen="4">
+        <div class="entry-marker">
+          <span class="marker-year">2020</span>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="entry-card">
+          <div class="card-header header-green">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <span class="gen-badge">GEN 4 Emerges</span>
+          </div>
+          <div class="card-content">
+            <h3>The Infodemic</h3>
+            <div class="event-list">
+              <div class="event-item">
+                <span class="event-dot green"></span>
+                <div class="event-info">
+                  <strong>COVID-19 Infodemic</strong>
+                  <p>Misinformation became a public health crisis. Anti-vax content, miracle cures, and conspiracy theories spread faster than the virus.</p>
+                </div>
+              </div>
+            </div>
+            <div class="intervention-response">
+              <div class="response-label">The Response</div>
+              <div class="response-content">
+                <strong>Platform Moderation</strong>
+                <p>Deplatform, derank, demonetize. The EU's Digital Services Act emerged. Content moderation became serious business.</p>
+              </div>
+            </div>
+            <div class="drog-highlight">
+              <span class="drog-badge">DROG Launches Go Viral!</span>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2021</div>
-          <div class="timeline-events">
-            <span class="event event-purple">January 6th</span>
+      </div>
+
+      <!-- 2021 -->
+      <div class="timeline-entry" data-year="2021">
+        <div class="entry-marker">
+          <span class="marker-year">2021</span>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="entry-card">
+          <div class="card-header header-red">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <span class="gen-badge">Moderation Tested</span>
+          </div>
+          <div class="card-content">
+            <h3>The Insurrection</h3>
+            <div class="event-list">
+              <div class="event-item">
+                <span class="event-dot red"></span>
+                <div class="event-info">
+                  <strong>January 6th Capitol Attack</strong>
+                  <p>Online conspiracy theories manifested as real-world violence. The stakes of disinformation became undeniable.</p>
+                </div>
+              </div>
+            </div>
+            <div class="intervention-response">
+              <div class="response-label">The Lesson</div>
+              <div class="response-content">
+                <strong>Moderation Has Limits</strong>
+                <p>Deplatforming came too late. Users migrated to alternative platforms. The fundamental question emerged: who decides what's true?</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2022</div>
-          <div class="timeline-events">
-            <span class="event event-orange">Ukraine War Disinfo</span>
-            <span class="event event-blue">Musk Acquires Twitter</span>
+      </div>
+
+      <!-- 2022 -->
+      <div class="timeline-entry" data-year="2022" data-gen="5">
+        <div class="entry-marker">
+          <span class="marker-year">2022</span>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="entry-card">
+          <div class="card-header header-blue">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <span class="gen-badge">GEN 5 Emerges</span>
+          </div>
+          <div class="card-content">
+            <h3>The Platform Shift</h3>
+            <div class="event-list">
+              <div class="event-item">
+                <span class="event-dot orange"></span>
+                <div class="event-info">
+                  <strong>Ukraine War Disinformation</strong>
+                  <p>Real-time information warfare. Competing narratives from day one. OSINT communities emerged as truth-seekers.</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <span class="event-dot blue"></span>
+                <div class="event-info">
+                  <strong>Musk Acquires Twitter</strong>
+                  <p>A philosophical shift in platform governance. Content moderation policies thrown into chaos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="intervention-response">
+              <div class="response-label">The Response</div>
+              <div class="response-content">
+                <strong>Interaction & Deliberation</strong>
+                <p>Focus shifts from content to connection. Deep canvassing, street epistemology. People change minds through conversation.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2023</div>
-          <div class="timeline-events">
-            <span class="event event-purple">ChatGPT / AI Boom</span>
-            <span class="event event-green">Twitter → X</span>
-            <span class="event event-orange">Israel-Hamas Info War</span>
+      </div>
+
+      <!-- 2023 -->
+      <div class="timeline-entry" data-year="2023">
+        <div class="entry-marker">
+          <span class="marker-year">2023</span>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="entry-card">
+          <div class="card-header header-purple">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2"/>
+              </svg>
+            </div>
+            <span class="gen-badge">The AI Inflection</span>
+          </div>
+          <div class="card-content">
+            <h3>The AI Explosion</h3>
+            <div class="event-list">
+              <div class="event-item">
+                <span class="event-dot purple"></span>
+                <div class="event-info">
+                  <strong>ChatGPT & Generative AI</strong>
+                  <p>AI goes mainstream. The cost of creating convincing content drops to near zero.</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <span class="event-dot green"></span>
+                <div class="event-info">
+                  <strong>Twitter Becomes X</strong>
+                  <p>Continued retreat from traditional content moderation. Community Notes as the new model.</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <span class="event-dot orange"></span>
+                <div class="event-info">
+                  <strong>Israel-Hamas Information War</strong>
+                  <p>Parallel information realities form instantly. Different communities see entirely different "facts."</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2024</div>
-          <div class="timeline-events">
-            <span class="event event-blue">Global Election Year</span>
-            <span class="event event-purple">DSA Enforcement</span>
-            <span class="event event-green">Deepfake Explosion</span>
+      </div>
+
+      <!-- 2024 -->
+      <div class="timeline-entry" data-year="2024">
+        <div class="entry-marker">
+          <span class="marker-year">2024</span>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="entry-card">
+          <div class="card-header header-orange">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <span class="gen-badge">The Stress Test</span>
+          </div>
+          <div class="card-content">
+            <h3>The Global Election Year</h3>
+            <div class="event-list">
+              <div class="event-item">
+                <span class="event-dot blue"></span>
+                <div class="event-info">
+                  <strong>50+ Countries Vote</strong>
+                  <p>US, EU, India, and dozens more. The biggest test of information integrity in history.</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <span class="event-dot purple"></span>
+                <div class="event-info">
+                  <strong>DSA Enforcement Begins</strong>
+                  <p>Europe's Digital Services Act goes into full effect. New obligations for platforms.</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <span class="event-dot green"></span>
+                <div class="event-info">
+                  <strong>Deepfake Explosion</strong>
+                  <p>Synthetic media becomes indistinguishable from reality. Audio, video, images — all fakeable.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2025</div>
-          <div class="timeline-events">
-            <span class="event event-orange">Meta Drops Fact-Checking</span>
-            <span class="event event-blue">Government Disinfo</span>
-            <span class="event event-purple">Platform Exodus</span>
+      </div>
+
+      <!-- 2025 -->
+      <div class="timeline-entry timeline-entry-highlight" data-year="2025" data-gen="6">
+        <div class="entry-marker">
+          <span class="marker-year">2025</span>
+          <div class="marker-dot"></div>
+        </div>
+        <div class="entry-card">
+          <div class="card-header header-dark">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+              </svg>
+            </div>
+            <span class="gen-badge gen-badge-gold">GEN 6 Emerges</span>
           </div>
+          <div class="card-content">
+            <h3>No One Is Coming</h3>
+            <div class="event-list">
+              <div class="event-item">
+                <span class="event-dot gold"></span>
+                <div class="event-info">
+                  <strong>Meta Drops Fact-Checking</strong>
+                  <p>The largest platform abandons third-party verification. Community Notes becomes the only model.</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <span class="event-dot gold"></span>
+                <div class="event-info">
+                  <strong>Government Disinformation</strong>
+                  <p>Official channels spread contested claims. Fact-checkers labeled as enemies. The state is no longer the anchor.</p>
+                </div>
+              </div>
+              <div class="event-item">
+                <span class="event-dot gold"></span>
+                <div class="event-info">
+                  <strong>Platform Exodus</strong>
+                  <p>Users scatter across platforms. No single town square. Fragmented information ecosystems.</p>
+                </div>
+              </div>
+            </div>
+            <div class="intervention-response intervention-response-dark">
+              <div class="response-label">The New Paradigm</div>
+              <div class="response-content">
+                <strong>Collective Sensemaking</strong>
+                <p>No cavalry is coming. Communities must build their own capacity for distributed verification, local deliberation, and shared coordination.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="timeline-conclusion">
+      <div class="container">
+        <div class="conclusion-content">
+          <span class="conclusion-mantra">Disinformation adapts. Consequences evolve. Paradigms shift.</span>
+          <h3>The question is no longer "who has the answers?"</h3>
+          <p>It's "how do we build the capacity to navigate uncertainty together?"</p>
         </div>
       </div>
     </div>
@@ -780,87 +1132,414 @@ import Layout from '../layouts/Layout.astro';
     background: rgba(255, 255, 255, 0.1);
   }
 
-  /* Timeline Section */
-  .timeline-section {
-    background: var(--white);
+  /* Immersive Timeline */
+  .immersive-timeline {
+    background: linear-gradient(180deg, var(--gray-900) 0%, #0f172a 100%);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
   }
 
-  .decade-timeline {
+  .timeline-intro {
+    min-height: 60vh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
   }
 
-  .timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem;
+  .timeline-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+    pointer-events: none;
   }
 
-  .timeline-year {
-    font-family: var(--font-mono);
+  .timeline-intro .section-label {
+    color: var(--accent);
+  }
+
+  .timeline-intro h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    background: linear-gradient(135deg, var(--white) 0%, var(--gray-300) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .timeline-intro p {
     font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--gray-900);
-    background: var(--gray-100);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+    color: var(--gray-400);
+    max-width: 600px;
+    margin: 0 auto 2rem;
   }
 
-  .timeline-events {
+  .scroll-indicator {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    animation: bounce 2s infinite;
   }
 
-  .event {
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 0.375rem 0.75rem;
-    border-radius: 100px;
-    white-space: nowrap;
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
   }
 
-  .event-blue {
-    background: rgba(37, 99, 235, 0.15);
-    color: #1d4ed8;
+  /* Timeline Track */
+  .timeline-track {
+    position: relative;
+    padding: 4rem 0;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
-  .event-green {
-    background: rgba(16, 185, 129, 0.15);
-    color: #047857;
-  }
-
-  .event-purple {
-    background: rgba(124, 58, 237, 0.15);
-    color: #5b21b6;
-  }
-
-  .event-orange {
-    background: rgba(245, 158, 11, 0.15);
-    color: #b45309;
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, var(--primary), var(--accent), var(--primary), transparent);
+    transform: translateX(-50%);
   }
 
   @media (max-width: 768px) {
-    .decade-timeline {
-      flex-direction: column;
-      align-items: stretch;
+    .timeline-line {
+      left: 30px;
+    }
+  }
+
+  /* Timeline Entry */
+  .timeline-entry {
+    position: relative;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .timeline-entry.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .timeline-entry:nth-child(odd) {
+    padding-right: calc(50% + 40px);
+    text-align: right;
+  }
+
+  .timeline-entry:nth-child(odd).visible {
+    transform: translateX(0);
+  }
+
+  .timeline-entry:nth-child(even) {
+    padding-left: calc(50% + 40px);
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-entry:nth-child(odd),
+    .timeline-entry:nth-child(even) {
+      padding-left: 70px;
+      padding-right: 20px;
+      text-align: left;
+    }
+  }
+
+  /* Staggered delays for entries becoming visible */
+  .timeline-entry:nth-child(1).visible { transition-delay: 0s; }
+  .timeline-entry:nth-child(2).visible { transition-delay: 0.05s; }
+  .timeline-entry:nth-child(3).visible { transition-delay: 0.1s; }
+  .timeline-entry:nth-child(4).visible { transition-delay: 0.15s; }
+  .timeline-entry:nth-child(5).visible { transition-delay: 0.2s; }
+  .timeline-entry:nth-child(6).visible { transition-delay: 0.25s; }
+  .timeline-entry:nth-child(7).visible { transition-delay: 0.3s; }
+  .timeline-entry:nth-child(8).visible { transition-delay: 0.35s; }
+  .timeline-entry:nth-child(9).visible { transition-delay: 0.4s; }
+
+  /* Entry Marker */
+  .entry-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  }
+
+  @media (max-width: 768px) {
+    .entry-marker {
+      left: 30px;
+    }
+  }
+
+  .marker-year {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--gray-900);
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    margin-bottom: 0.5rem;
+  }
+
+  .marker-dot {
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 3px solid var(--gray-900);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  }
+
+  .timeline-entry-highlight .marker-dot {
+    background: var(--accent);
+    box-shadow: 0 0 30px rgba(247, 181, 0, 0.6);
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Entry Card */
+  .entry-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+  }
+
+  .entry-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+  }
+
+  .timeline-entry-highlight .entry-card {
+    background: rgba(247, 181, 0, 0.05);
+    border-color: rgba(247, 181, 0, 0.3);
+  }
+
+  /* Card Header */
+  .card-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header-blue { background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(37, 99, 235, 0.05) 100%); }
+  .header-orange { background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.05) 100%); }
+  .header-purple { background: linear-gradient(135deg, rgba(124, 58, 237, 0.2) 0%, rgba(124, 58, 237, 0.05) 100%); }
+  .header-green { background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.05) 100%); }
+  .header-red { background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(220, 38, 38, 0.05) 100%); }
+  .header-dark { background: linear-gradient(135deg, rgba(247, 181, 0, 0.2) 0%, rgba(247, 181, 0, 0.05) 100%); }
+
+  .header-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+  }
+
+  .gen-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.375rem 0.75rem;
+    border-radius: 100px;
+    color: var(--white);
+  }
+
+  .gen-badge-gold {
+    background: var(--accent);
+    color: var(--gray-900);
+  }
+
+  /* Card Content */
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-entry:nth-child(odd) .card-content {
+    text-align: left;
+  }
+
+  /* Event List */
+  .event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .event-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .event-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .event-dot.blue { background: #3b82f6; }
+  .event-dot.green { background: #10b981; }
+  .event-dot.purple { background: #8b5cf6; }
+  .event-dot.orange { background: #f59e0b; }
+  .event-dot.red { background: #ef4444; }
+  .event-dot.gold { background: var(--accent); }
+
+  .event-info strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+  }
+
+  .event-info p {
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Intervention Response */
+  .intervention-response {
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border-left: 3px solid var(--primary);
+  }
+
+  .intervention-response-dark {
+    background: rgba(247, 181, 0, 0.1);
+    border-left-color: var(--accent);
+  }
+
+  .response-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .intervention-response-dark .response-label {
+    color: var(--accent);
+  }
+
+  .response-content strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .response-content p {
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* DROG Highlight */
+  .drog-highlight {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .drog-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: var(--gray-900);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+  }
+
+  /* Timeline Conclusion */
+  .timeline-conclusion {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, transparent 0%, rgba(247, 181, 0, 0.05) 100%);
+  }
+
+  .conclusion-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .conclusion-mantra {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+
+  .conclusion-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .conclusion-content p {
+    font-size: 1.25rem;
+    color: var(--gray-400);
+  }
+
+  @media (max-width: 768px) {
+    .timeline-intro h2 {
+      font-size: 2rem;
     }
 
-    .timeline-item {
-      flex-direction: row;
-      justify-content: flex-start;
-      gap: 1.5rem;
+    .timeline-intro p {
+      font-size: 1rem;
     }
 
-    .timeline-events {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+    .card-content h3 {
+      font-size: 1.25rem;
+    }
+
+    .conclusion-content h3 {
+      font-size: 1.5rem;
     }
   }
 
@@ -1088,4 +1767,143 @@ import Layout from '../layouts/Layout.astro';
   .challenge-text strong {
     color: var(--gray-900);
   }
+
+  /* Timeline Line Progress */
+  .timeline-line {
+    background: linear-gradient(180deg,
+      transparent 0%,
+      var(--primary) 5%,
+      var(--primary) var(--progress, 0%),
+      rgba(37, 99, 235, 0.2) var(--progress, 0%),
+      rgba(37, 99, 235, 0.2) 95%,
+      transparent 100%
+    );
+  }
+
+  /* Marker Animation */
+  .marker-dot {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .timeline-entry.visible .marker-dot {
+    animation: pulse 2s ease-in-out;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); box-shadow: 0 0 30px rgba(37, 99, 235, 0.7); }
+  }
+
+  /* Entry Card Hover Enhancement */
+  .entry-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .timeline-entry.visible .entry-card {
+    animation: cardReveal 0.6s ease forwards;
+  }
+
+  @keyframes cardReveal {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  /* Year marker glow on visible */
+  .timeline-entry.visible .marker-year {
+    animation: yearGlow 0.5s ease forwards;
+  }
+
+  @keyframes yearGlow {
+    0% { box-shadow: none; }
+    50% { box-shadow: 0 0 20px rgba(247, 181, 0, 0.5); }
+    100% { box-shadow: none; }
+  }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Intersection Observer for timeline entries
+    const timelineEntries = document.querySelectorAll('.timeline-entry');
+    const timelineTrack = document.querySelector('.timeline-track');
+    const timelineLine = document.querySelector('.timeline-line');
+
+    // Observer options
+    const observerOptions = {
+      root: null,
+      rootMargin: '-10% 0px -10% 0px',
+      threshold: [0, 0.25, 0.5, 0.75, 1]
+    };
+
+    // Create observer for entry visibility
+    const entryObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.25) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all timeline entries
+    timelineEntries.forEach(entry => {
+      entryObserver.observe(entry);
+    });
+
+    // Timeline progress tracking
+    const updateTimelineProgress = () => {
+      if (!timelineTrack || !timelineLine) return;
+
+      const trackRect = timelineTrack.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const trackTop = trackRect.top;
+      const trackHeight = trackRect.height;
+
+      // Calculate how much of the track is above the viewport center
+      const scrollProgress = Math.max(0, Math.min(1,
+        (windowHeight * 0.5 - trackTop) / trackHeight
+      ));
+
+      // Update CSS variable for line progress
+      timelineLine.style.setProperty('--progress', `${scrollProgress * 100}%`);
+    };
+
+    // Scroll listener for timeline progress
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateTimelineProgress();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Initial update
+    updateTimelineProgress();
+
+    // Smooth scroll indicator click
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+      scrollIndicator.style.cursor = 'pointer';
+      scrollIndicator.addEventListener('click', () => {
+        const firstEntry = timelineEntries[0];
+        if (firstEntry) {
+          firstEntry.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    }
+
+    // Add parallax effect to timeline intro
+    const timelineIntro = document.querySelector('.timeline-intro');
+    if (timelineIntro) {
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const introRect = timelineIntro.getBoundingClientRect();
+        if (introRect.bottom > 0 && introRect.top < window.innerHeight) {
+          const parallaxValue = scrolled * 0.3;
+          timelineIntro.style.backgroundPositionY = `${parallaxValue}px`;
+        }
+      });
+    }
+  });
+</script>

@@ -83,54 +83,130 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Born at DROG Section -->
-  <section class="section">
+  <section class="section projects-section">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Impact</span>
         <h2 class="section-title">Born at DROG</h2>
-        <p class="section-description">These projects were incubated at DROG and have reached millions worldwide.</p>
+        <p class="section-description">Award-winning games that have reached millions worldwide</p>
       </div>
-      <div class="spinoff-grid">
-        <a href="https://www.getbadnews.com" target="_blank" class="spinoff-card">
-          <div class="spinoff-header">
-            <span class="spinoff-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
+
+      <!-- Featured Project: Bad News -->
+      <a href="https://www.getbadnews.com" target="_blank" class="featured-project">
+        <div class="featured-project-content">
+          <div class="featured-badges">
+            <span class="award-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
+              Award Winner
             </span>
-            <span class="spinoff-stat">15M+ players</span>
+            <span class="gen-badge">Gen 3 Intervention</span>
           </div>
           <h3>Bad News</h3>
-          <p>Award-winning browser game teaching the six degrees of manipulation. Players become fake news tycoons to learn how disinformation spreads.</p>
-          <span class="link-arrow">Learn more &rarr;</span>
-        </a>
-        <a href="https://www.goviralgame.com" target="_blank" class="spinoff-card">
-          <div class="spinoff-header">
-            <span class="spinoff-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <p class="featured-description">The flagship prebunking game that started it all. Players become fake news tycoons, learning the six degrees of manipulation to build immunity against disinformation.</p>
+          <div class="featured-stats">
+            <div class="stat">
+              <span class="stat-number">15M+</span>
+              <span class="stat-text">Players Worldwide</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-text">Languages</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-text">Countries</span>
+            </div>
+          </div>
+          <span class="play-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Play Bad News
+          </span>
+        </div>
+        <div class="featured-project-visual">
+          <div class="visual-circle">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
+              <path d="M10 8h6M10 12h4M10 16h2"/>
+            </svg>
+          </div>
+          <div class="floating-badge badge-1">Prebunking</div>
+          <div class="floating-badge badge-2">Inoculation</div>
+          <div class="floating-badge badge-3">Gamification</div>
+        </div>
+      </a>
+
+      <!-- Other Projects Grid -->
+      <div class="projects-grid">
+        <a href="https://www.goviralgame.com" target="_blank" class="project-card project-goviral">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
               </svg>
-            </span>
-            <span class="spinoff-stat">2M+ players</span>
+            </div>
+            <span class="project-stat">2M+ players</span>
           </div>
-          <h3>Go Viral!</h3>
-          <p>A 5-minute game developed with Cambridge University to protect against COVID-19 misinformation.</p>
-          <span class="link-arrow">Learn more &rarr;</span>
+          <div class="project-body">
+            <span class="project-partner">with Cambridge University</span>
+            <h3>Go Viral!</h3>
+            <p>A 5-minute game protecting against COVID-19 misinformation. Inoculate yourself against viral manipulation tactics.</p>
+            <div class="project-tags">
+              <span>COVID-19</span>
+              <span>Health</span>
+              <span>5 min</span>
+            </div>
+            <span class="project-link">
+              Play Now
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
         </a>
-        <a href="https://harmonysquare.game" target="_blank" class="spinoff-card">
-          <div class="spinoff-header">
-            <span class="spinoff-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+        <a href="https://harmonysquare.game" target="_blank" class="project-card project-harmony">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                 <path d="M9 9h6v6H9z"/>
               </svg>
-            </span>
-            <span class="spinoff-stat">500K+ players</span>
+            </div>
+            <span class="project-stat">500K+ players</span>
           </div>
-          <h3>Harmony Square</h3>
-          <p>Play as a Chief Disinformation Officer in this game about political manipulation and polarization.</p>
-          <span class="link-arrow">Learn more &rarr;</span>
+          <div class="project-body">
+            <span class="project-partner">Political Disinformation</span>
+            <h3>Harmony Square</h3>
+            <p>Become Chief Disinformation Officer in this game about political manipulation, trolling, and polarization.</p>
+            <div class="project-tags">
+              <span>Politics</span>
+              <span>Trolling</span>
+              <span>15 min</span>
+            </div>
+            <span class="project-link">
+              Play Now
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
         </a>
+      </div>
+
+      <!-- Total Impact -->
+      <div class="total-impact">
+        <div class="impact-stat">
+          <span class="impact-number">17.5M+</span>
+          <span class="impact-label">Total Players Reached</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-text">
+          <p>Our games have been featured by BBC, The Guardian, Washington Post, and used by governments and educators worldwide.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -425,80 +501,345 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 1.5rem;
   }
 
-  /* Spinoff Grid */
-  .spinoff-grid {
+  /* Projects Section */
+  .projects-section {
+    background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
+  }
+
+  /* Featured Project - Bad News */
+  .featured-project {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.2fr 1fr;
+    background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    color: var(--white);
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+  }
+
+  .featured-project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 968px) {
+    .featured-project {
+      grid-template-columns: 1fr;
+    }
+    .featured-project-visual {
+      display: none;
+    }
+  }
+
+  .featured-project-content {
+    padding: 3rem;
+  }
+
+  .featured-badges {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .award-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: var(--gray-900);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .gen-badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .featured-project h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .featured-description {
+    font-size: 1.1rem;
+    color: var(--gray-300);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .featured-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .featured-stats .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featured-stats .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+    font-family: var(--font-mono);
+  }
+
+  .featured-stats .stat-text {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+  }
+
+  .play-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--white);
+    color: var(--gray-900);
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+
+  .featured-project:hover .play-btn {
+    background: var(--accent);
+    gap: 1rem;
+  }
+
+  .featured-project-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .visual-circle {
+    width: 160px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+  }
+
+  .floating-badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--white);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .badge-1 { top: 20%; right: 15%; animation-delay: 0s; }
+  .badge-2 { bottom: 30%; left: 10%; animation-delay: 1s; }
+  .badge-3 { bottom: 15%; right: 20%; animation-delay: 2s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    margin-bottom: 3rem;
   }
 
   @media (max-width: 768px) {
-    .spinoff-grid {
+    .projects-grid {
       grid-template-columns: 1fr;
     }
   }
 
-  .spinoff-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
-    border-radius: 12px;
-    padding: 2rem;
-    transition: all 0.2s;
-    display: block;
-    color: inherit;
+  .project-card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
   }
 
-  .spinoff-card:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
-    border-color: var(--primary);
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
   }
 
-  .spinoff-header {
+  .project-header {
+    padding: 2rem 2rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
   }
 
-  .spinoff-icon {
-    width: 48px;
-    height: 48px;
-    background: var(--gray-100);
-    border-radius: 10px;
+  .project-goviral .project-header {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: var(--white);
+  }
+
+  .project-harmony .project-header {
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    color: var(--white);
+  }
+
+  .project-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
   }
 
-  .spinoff-stat {
+  .project-stat {
     font-family: var(--font-mono);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--primary);
-    background: rgba(37, 99, 235, 0.1);
-    padding: 0.25rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
     border-radius: 100px;
   }
 
-  .spinoff-card h3 {
-    font-size: 1.25rem;
+  .project-body {
+    background: var(--white);
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-partner {
+    font-size: 0.8rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-500);
     margin-bottom: 0.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--gray-900);
+    margin-bottom: 0.75rem;
   }
 
-  .spinoff-card p {
+  .project-body p {
     color: var(--gray-600);
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
   }
 
-  .link-arrow {
-    font-size: 0.875rem;
+  .project-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .project-tags span {
+    font-size: 0.75rem;
     font-weight: 500;
+    background: var(--gray-100);
+    color: var(--gray-600);
+    padding: 0.375rem 0.75rem;
+    border-radius: 100px;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--gray-900);
+    transition: all 0.2s;
+  }
+
+  .project-goviral:hover .project-link { color: #dc2626; }
+  .project-harmony:hover .project-link { color: #7c3aed; }
+
+  .project-card:hover .project-link {
+    gap: 0.75rem;
+  }
+
+  /* Total Impact */
+  .total-impact {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2.5rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .total-impact {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+    .impact-divider {
+      width: 60px !important;
+      height: 3px !important;
+    }
+  }
+
+  .impact-stat {
+    flex-shrink: 0;
+  }
+
+  .impact-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
     color: var(--primary);
+    font-family: var(--font-mono);
+    line-height: 1;
+  }
+
+  .impact-label {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    font-weight: 500;
+  }
+
+  .impact-divider {
+    width: 3px;
+    height: 60px;
+    background: var(--gray-200);
+    border-radius: 100px;
+    flex-shrink: 0;
+  }
+
+  .impact-text p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin: 0;
+    font-size: 1.05rem;
   }
 
   /* Team Grid */

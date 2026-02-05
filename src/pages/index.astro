@@ -298,8 +298,8 @@ import Layout from '../layouts/Layout.astro';
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 500;
-    color: var(--accent);
-    background: rgba(247, 181, 0, 0.15);
+    color: var(--primary);
+    background: rgba(37, 99, 235, 0.1);
     padding: 0.5rem 1rem;
     border-radius: 100px;
     margin-bottom: 1.5rem;
@@ -322,7 +322,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .hero-highlight {
-    background: linear-gradient(135deg, var(--accent) 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -501,7 +501,7 @@ import Layout from '../layouts/Layout.astro';
   .what-icon {
     width: 56px;
     height: 56px;
-    background: var(--accent);
+    background: var(--primary);
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -572,7 +572,7 @@ import Layout from '../layouts/Layout.astro';
   .about-card-icon {
     width: 48px;
     height: 48px;
-    background: var(--accent);
+    background: var(--primary);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -635,8 +635,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .gen-item-highlight {
-    background: var(--gray-900);
-    border-color: var(--gray-900);
+    background: var(--primary);
+    border-color: var(--primary);
   }
 
   .gen-item-highlight .gen-number,
@@ -653,7 +653,7 @@ import Layout from '../layouts/Layout.astro';
     font-family: var(--font-mono);
     font-size: 2rem;
     font-weight: 700;
-    color: var(--accent);
+    color: var(--primary);
   }
 
   .gen-title {
@@ -727,15 +727,15 @@ import Layout from '../layouts/Layout.astro';
     font-family: var(--font-mono);
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--accent);
-    background: rgba(247, 181, 0, 0.15);
+    color: var(--accent-dark);
+    background: rgba(247, 181, 0, 0.2);
     padding: 0.5rem 1rem;
     border-radius: 100px;
   }
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(135deg, var(--gray-900) 0%, #1e1b4b 100%);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     padding: 6rem 0;
   }
 

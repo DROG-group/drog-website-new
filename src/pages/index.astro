@@ -66,12 +66,13 @@ import Layout from '../layouts/Layout.astro';
   <section class="section what-we-do">
     <div class="container">
       <div class="what-content">
-        <span class="section-label">What is DROG?</span>
-        <h2 class="section-title">The European-Centered Community for Counter-Disinformation</h2>
-        <p class="what-intro">
-          DROG Group makes independent interventions against disinformation by uniting diverse expertise
-          across Europe. We bring together people with different skills to tackle information manipulation.
-        </p>
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Building the Most Effective Community for Countering Disinformation</h2>
+        <div class="story-text">
+          <p>DROG was founded with a simple but ambitious goal: to build the most effective community for countering disinformation in Europe and beyond.</p>
+          <p>We recognized that fighting disinformation requires more than just fact-checking or media literacy. It demands a multi-generational approach that adapts to evolving threats and leverages diverse expertise.</p>
+          <p>Through our DIM (Disinformation Intervention Model), we've mapped out six generations of counter-disinformation interventions, each responding to different challenges and paradigms.</p>
+        </div>
         <div class="what-grid">
           <div class="what-card">
             <div class="what-icon">
@@ -453,6 +454,23 @@ import Layout from '../layouts/Layout.astro';
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .story-text {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: left;
+  }
+
+  .story-text p {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+
+  .story-text p:last-child {
+    margin-bottom: 0;
   }
 
   .what-grid {

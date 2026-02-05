@@ -9,6 +9,16 @@ import Layout from '../layouts/Layout.astro';
       <span class="section-label">Framework</span>
       <h1>Disinformation Intervention Model</h1>
       <p class="hero-subtitle">Disinformation adapts. Consequences evolve. Paradigms shift. Next-generation interventions emerge.</p>
+      <a href="/drog-manifesto-2026.pdf" target="_blank" class="manifesto-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="12" y1="18" x2="12" y2="12"/>
+          <line x1="9" y1="15" x2="12" y2="18"/>
+          <line x1="15" y1="15" x2="12" y2="18"/>
+        </svg>
+        Read the 2026 Manifesto
+      </a>
     </div>
   </section>
 
@@ -465,6 +475,35 @@ import Layout from '../layouts/Layout.astro';
     color: var(--gray-400);
     max-width: 600px;
     margin: 0 auto;
+  }
+
+  .manifesto-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: var(--accent);
+    color: var(--gray-900);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(247, 181, 0, 0.4);
+  }
+
+  .manifesto-btn:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 181, 0, 0.5);
+  }
+
+  .manifesto-btn svg {
+    transition: transform 0.3s;
+  }
+
+  .manifesto-btn:hover svg {
+    transform: translateY(2px);
   }
 
   .section-gray {

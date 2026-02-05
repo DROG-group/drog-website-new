@@ -356,7 +356,27 @@ import Layout from '../layouts/Layout.astro';
 
   .hero-visual {
     position: relative;
+    width: 400px;
     height: 400px;
+    animation: rotate-clockwise 20s linear infinite;
+  }
+
+  @keyframes rotate-clockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes counter-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
   }
 
   @media (max-width: 968px) {
@@ -372,22 +392,23 @@ import Layout from '../layouts/Layout.astro';
     padding: 1.5rem;
     box-shadow: var(--shadow-xl);
     border: 1px solid var(--gray-100);
+    animation: counter-rotate 20s linear infinite;
   }
 
   .hero-card-1 {
     top: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .hero-card-2 {
-    top: 50%;
+    bottom: 15%;
     left: 0;
-    transform: translateY(-50%);
   }
 
   .hero-card-3 {
-    bottom: 0;
-    right: 20%;
+    bottom: 15%;
+    right: 0;
   }
 
   .card-number {

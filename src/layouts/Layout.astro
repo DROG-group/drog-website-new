@@ -31,11 +31,22 @@ const { title, description = "DROG Group makes independent interventions against
           <a href="/blog">Blog</a>
           <a href="/contact" class="nav-cta">Get in Touch</a>
         </div>
-        <button class="nav-toggle" aria-label="Toggle menu">
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-links">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/dim">DIM Model</a>
+          <a href="/community">Community</a>
+          <a href="/blog">Blog</a>
+          <a href="/contact" class="mobile-cta">Get in Touch</a>
+        </div>
       </div>
     </nav>
 
@@ -223,10 +234,12 @@ const { title, description = "DROG Group makes independent interventions against
       .nav-toggle {
         display: none;
         flex-direction: column;
-        gap: 4px;
+        gap: 5px;
         background: none;
         border: none;
         padding: 4px;
+        z-index: 110;
+        position: relative;
       }
 
       .nav-toggle span {
@@ -235,6 +248,92 @@ const { title, description = "DROG Group makes independent interventions against
         height: 2px;
         background: var(--gray-900);
         border-radius: 1px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+      }
+
+      /* Hamburger to X animation */
+      .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+
+      .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
+      /* Mobile Menu */
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--white);
+        z-index: 99;
+        padding: 6rem 2rem 2rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-menu.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-menu-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .mobile-menu-links a {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--gray-900);
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gray-100);
+        transition: all 0.2s;
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      .mobile-menu.active .mobile-menu-links a {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .mobile-menu.active .mobile-menu-links a:nth-child(1) { transition-delay: 0.1s; }
+      .mobile-menu.active .mobile-menu-links a:nth-child(2) { transition-delay: 0.15s; }
+      .mobile-menu.active .mobile-menu-links a:nth-child(3) { transition-delay: 0.2s; }
+      .mobile-menu.active .mobile-menu-links a:nth-child(4) { transition-delay: 0.25s; }
+      .mobile-menu.active .mobile-menu-links a:nth-child(5) { transition-delay: 0.3s; }
+      .mobile-menu.active .mobile-menu-links a:nth-child(6) { transition-delay: 0.35s; }
+
+      .mobile-menu-links a:hover {
+        color: var(--primary);
+        padding-left: 1rem;
+      }
+
+      .mobile-cta {
+        margin-top: 1rem;
+        background: var(--primary);
+        color: var(--white) !important;
+        padding: 1rem 2rem !important;
+        border-radius: 8px;
+        text-align: center;
+        border-bottom: none !important;
+      }
+
+      .mobile-cta:hover {
+        background: var(--primary-dark);
+        padding-left: 2rem !important;
       }
 
       @media (max-width: 768px) {
@@ -243,6 +342,12 @@ const { title, description = "DROG Group makes independent interventions against
         }
         .nav-toggle {
           display: flex;
+        }
+        .mobile-menu {
+          display: block;
+        }
+        body.menu-open {
+          overflow: hidden;
         }
       }
 
@@ -463,5 +568,44 @@ const { title, description = "DROG Group makes independent interventions against
         color: var(--white);
       }
     </style>
+
+    <script>
+      // Mobile menu toggle
+      const navToggle = document.querySelector('.nav-toggle');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const body = document.body;
+
+      if (navToggle && mobileMenu) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = navToggle.classList.contains('active');
+
+          navToggle.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+          body.classList.toggle('menu-open');
+
+          navToggle.setAttribute('aria-expanded', !isOpen);
+        });
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            navToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    </script>
   </body>
 </html>

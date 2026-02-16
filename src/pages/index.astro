@@ -374,6 +374,35 @@ import Layout from '../layouts/Layout.astro';
             </span>
           </div>
         </a>
+
+        <a href="https://tactcheck.com" target="_blank" class="project-card project-tactcheck">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 20h9"/>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                <path d="M2 12a10 10 0 1 1 10 10"/>
+              </svg>
+            </div>
+            <span class="project-stat">Research Platform</span>
+          </div>
+          <div class="project-body">
+            <span class="project-partner">Simulation Environment</span>
+            <h3>TactCheck</h3>
+            <p>A Mastodon-based simulation platform for researchers to study disinformation tactics at scale. Check tactics, not just facts.</p>
+            <div class="project-tags">
+              <span>Research</span>
+              <span>Mastodon</span>
+              <span>Simulation</span>
+            </div>
+            <span class="project-link">
+              Learn More
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
+        </a>
       </div>
 
       <!-- Total Impact -->
@@ -1100,6 +1129,11 @@ import Layout from '../layouts/Layout.astro';
     color: var(--white);
   }
 
+  .project-tactcheck .project-header {
+    background: linear-gradient(135deg, #19003D 0%, #2d0066 100%);
+    color: var(--white);
+  }
+
   .project-icon {
     width: 56px;
     height: 56px;
@@ -1179,6 +1213,7 @@ import Layout from '../layouts/Layout.astro';
   .project-goviral:hover .project-link { color: #dc2626; }
   .project-harmony:hover .project-link { color: #7c3aed; }
   .project-rigit:hover .project-link { color: #0891b2; }
+  .project-tactcheck:hover .project-link { color: #19003D; }
 
   .project-card:hover .project-link {
     gap: 0.75rem;

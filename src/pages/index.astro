@@ -345,6 +345,35 @@ import Layout from '../layouts/Layout.astro';
             </span>
           </div>
         </a>
+
+        <a href="https://www.rigitgame.com" target="_blank" class="project-card project-rigit">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 21h18M3 7v14M21 7v14M6 7V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3"/>
+                <path d="M9 21v-6h6v6"/>
+                <path d="M9 11h.01M15 11h.01"/>
+              </svg>
+            </div>
+            <span class="project-stat">New</span>
+          </div>
+          <div class="project-body">
+            <span class="project-partner">with GLOBSEC & Google.org</span>
+            <h3>Rig It</h3>
+            <p>A political simulator where you build a campaign, shape opinions, and discover how emotion and AI can influence democracy.</p>
+            <div class="project-tags">
+              <span>Elections</span>
+              <span>Deepfakes</span>
+              <span>AI</span>
+            </div>
+            <span class="project-link">
+              Play Now
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </div>
+        </a>
       </div>
 
       <!-- Total Impact -->
@@ -1019,9 +1048,15 @@ import Layout from '../layouts/Layout.astro';
   /* Projects Grid */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
+  }
+
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 768px) {
@@ -1057,6 +1092,11 @@ import Layout from '../layouts/Layout.astro';
 
   .project-harmony .project-header {
     background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    color: var(--white);
+  }
+
+  .project-rigit .project-header {
+    background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
     color: var(--white);
   }
 
@@ -1138,6 +1178,7 @@ import Layout from '../layouts/Layout.astro';
 
   .project-goviral:hover .project-link { color: #dc2626; }
   .project-harmony:hover .project-link { color: #7c3aed; }
+  .project-rigit:hover .project-link { color: #0891b2; }
 
   .project-card:hover .project-link {
     gap: 0.75rem;
